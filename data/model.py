@@ -123,7 +123,7 @@ def scat(df,location):
     plt.ylabel("price per sqft")
     plt.title(location)
     plt.legend()
-    plt.show()
+    #plt.show()
 
 #scat(df6,"Rajaji Nagar")#by this we found some 2 bhk of same location are higher than 3bhk , so remove
 
@@ -225,3 +225,11 @@ columns={
     'data_columns' : [col.lower() for col in x.columns]}
 with open("columns.json","w") as f:
     f.write(json.dumps(columns))
+
+
+
+a=input("location :-")
+b=input('sqft :-')
+c=input('bath :-')
+d=input('bhk :-')
+print('estimated price in lakhs:-',round(prediction(a,b,c,d),2))
